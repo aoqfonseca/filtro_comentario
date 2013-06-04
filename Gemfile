@@ -1,9 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'ruby-stemmer'
-gem 'haml'
-gem 'sinatra'
 gem 'activerecord'
+gem 'activerecord-mysql-adapter'
+gem 'haml'
+gem 'mysql2'
+gem 'ruby-stemmer'
+gem 'sinatra'
 gem 'sinatra-activerecord'
 
 
