@@ -1,0 +1,5 @@
+adapter: mysql2
+host: qa1.mysql.globoi.com
+database: comentarios
+username: usr_comentarios
+password: usr_comentarios
