@@ -1,1 +1,3 @@
-gem ruby-stemmer
+source 'https://rubygems.org'
+
+gem 'ruby-stemmer'
