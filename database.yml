@@ -3,3 +3,4 @@ host: qa1.mysql.globoi.com
 database: comentarios
 username: usr_comentarios
 password: usr_comentarios
+port: 3306
