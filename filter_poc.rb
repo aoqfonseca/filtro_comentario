@@ -22,8 +22,9 @@ end
 
 post '/classificar' do
   text = params[:texto]
-  category = classifier.classify text
-  "Categoria do texto e #{category}"
+  @category = classifier.classify text
+  @text = text
+  haml :resultado
 end
 
 get "/treinar" do
