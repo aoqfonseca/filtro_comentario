@@ -5,7 +5,7 @@ Bundler.setup(:default)
 require 'activerecord'
 Bundler.require
 
-require File.join(File.dirname(__FILE__), 'models', 'comentarios')
+require File.join(File.dirname(__FILE__), 'models', 'textos')
 
 dbconfig = YAML::load(File.open('local_database.yml'))
 ActiveRecord::Base.establish_connection(dbconfig)
@@ -29,13 +29,13 @@ post '/classificar' do
 end
 
 get "/treinar" do
-  comentarios_spam = Textos.where(:status=>"3").limit(1000)
-  comentarios_spam.each do |comentario|
+  textos_spam = Textos.where(:status=>"3").limit(1000)
+  textos_spam.each do |comentario|
     classifier.train_spam comentario.texto
   end
 
-  comentarios_notspam = Textos.where(:status =>"1").limit(1000)
-  comentarios_notspam.each do |comentario|
+  textos_notspam = Textos.where(:status =>"1").limit(1000)
+  textos_notspam.each do |comentario|
     classifier.train_not_spam comentario.texto
   end
   "Filtro treinado"
