@@ -8,7 +8,6 @@ gem 'mysql2'
 gem 'rake'
 gem 'ruby-stemmer'
 gem 'sinatra'
-gem 'sinatra-activerecord'
 
 group :test do
     gem 'rspec'

@@ -1,4 +1,4 @@
-class Comentario < ActiveRecord::Base
- self.table_name = "comentario"
+class Textos < ActiveRecord::Base
+ self.table_name = "test"
 end
 
